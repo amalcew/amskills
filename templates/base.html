@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+  <head>
+    <title>A.M. Skills</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.svg' %}">
+  </head>
+  <body>
+    <nav>
+    <div id="menu">
+      <a href="{% url 'portfolio:index' %}"><h3>A.M. Skills</h3></a>
+      <a href="{% url 'portfolio:certifications' %}"><h4>Certifications</h4></a>
+      <a href="{% url 'portfolio:projects' %}"><h4>Projects</h4></a>
+    </div>
+    <div id="user_panel">
+      {% if user.is_staff %}
+      <a href="{% url 'admin:index' %}"><h4>Admin Panel</h4></a>
+      {% endif %}
+    </div>
+    </nav>
+    {% block content %}{% endblock content %}
+    <footer>
+      <div id="box_footer"></div>
+      <div id="box_footer">
+        <div class="wrapper" id="images">
+          <div id="logo"></div>
+            <img id="logo" src="../static/images/python.png">
+            <img id="logo" src="../static/images/django.png">
+            <img id="logo" src="../static/images/heroku.png">
+          <div id="logo"></div>
+        </div>
+        <div id="made_with_love">
+          <p>Made by amalcew with
+          <span class="red">❤</span> in
+          <a href="https://www.python.org/" target="_blank"><span class="yellow underline">Python</span></a>,
+          <a href="https://www.djangoproject.com/" target="_blank"><span class="green underline">Django</span></a> and
+          <a href="https://www.heroku.com/" target="_blank"><span class="purple underline">Heroku</span></a></p>
+        </div>
+      </div>
+      <div id="box_footer"></div>
+    </footer>
+  </body>
+</html>

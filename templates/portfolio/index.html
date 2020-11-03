@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+    <body>
+        <header></header>
+        <main>
+          <div class="wrapper">
+            <div id="box_picture">
+              {% if bio.profile_photo %}
+              <img id="profile_picture" src="{{ bio.profile_photo }}">
+              {% endif %}
+              <div id="contact">
+                <h1>Contact</h1>
+                <p><span class="green">E-mail: </span>{{ bio.email }}</p>
+                {% if bio.show_number %}
+                <p><span class="green">Telephone number: </span>{{ bio.number }}</p>
+                {% endif %}
+                <h3>Links</h3>
+                {% if bio.show_social_media %}
+                <p><span class="green">Social media: </span><a href="https://{{ bio.social_media }}" target="_blank"><span class="underline black">{{ bio.social_media }}</span></a>
+                {% endif %}
+                {% if bio.show_repository %}
+                <p><span class="green">Repository: </span><a href="https://{{ bio.repository }}" target="_blank"><span class="underline black">{{ bio.repository }}</span></a>
+                {% endif %}
+
+                <h1>Skills</h1>
+                {% for skill in skills %}
+                × <a href="{% url 'portfolio:skill' skill.id %}"><span class="green underline">{{ skill.name }}</span></a>
+                {% endfor %}
+              </div>
+            </div>
+            <div id="box_about_me">
+              <div id="about_me">
+                {% if bio.about_me %}
+                <div class="wrapper_center"><h1>About me</h1></div>
+                <p>{% autoescape off %}{{ bio.about_me }}{% endautoescape %}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </main>
+    </body>
+</html>
+{% endblock content %}

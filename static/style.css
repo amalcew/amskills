@@ -1,0 +1,282 @@
+body{
+  background-color: #F7F9F9;
+  font-family: arial;
+  padding: 0;
+  margin: 0;
+}
+nav{
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: #1C2833;
+}
+header img{
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+}
+main{
+  min-height: calc(100% - 153px);
+}
+footer{
+  width:100%;
+  height: auto;
+  /*
+  position: fixed;
+  bottom: 0%;
+  */
+  background-color: #17202A;
+  display: flex;
+  justify-content: space-between;
+}
+
+a, a:link{
+  color: #17202A;
+  font-family: arial;
+  text-decoration: none;
+}
+main a hover{
+  text-decoration: underline;
+}
+h1{
+  font-size: 28px;
+  color: #52BE80;
+}
+h2{
+  font-size: 24px;
+  color: #52BE80;
+}
+h3{
+  font-size: 20px;
+  color: #52BE80;
+}
+h4{
+  font-size: 16px;
+  color: #52BE80;
+}
+h5{
+  font-size: 12px;
+  color: #52BE80;
+}
+p{
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+  color: #17202A;
+}
+pre{
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+  color: #17202A;
+}
+span.yellow{
+  color: #F4D03F;
+}
+span.dark_green{
+  color: #145A32;
+}
+span.green{
+  color: #2ECC71;
+}
+span.red{
+  color: #E74C3C;
+}
+span.purple{
+  color: #A569BD;
+}
+span.underline{
+  text-decoration: underline;
+}
+span.white{
+  color: #F7F9F9;
+}
+span.black{
+  color: #17202A
+}
+.wrapper{
+  width: 100%;
+  display: flex;
+}
+.wrapper_center{
+  width: 100%;
+  text-align: center;
+}
+#about_me{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+#box_footer{
+  width: 33%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+}
+#box_about_me{
+  height: auto;
+  width: 60%;
+}
+#box_picture{
+  justify-content: center;
+  height: auto;
+  width: 40%;
+}
+#box_picture img{
+  border: hidden;
+  border-radius: 20px;
+}
+#contact{
+  height: auto;
+  /* margin-right: 15%; */
+  margin-left: 15%;
+  margin-bottom: 10%;
+}
+#darker{
+  color: #1E8449;
+}
+#description{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#description-narrow{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#entry_category{
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+#entry_date_completed{
+  margin-right: 20px;
+  align-items: center;
+  justify-content:flex-end;
+  display: flex;
+  width: 50%;
+}
+#images{
+  height: 50px;
+}
+#logo{
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  text-align: center;
+}
+#made_with_love{
+  margin-top: 10px;
+  font-size: 11px;
+}
+#made_with_love p{
+  color: #F7F9F9;
+}
+#menu{
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+#menu h3{
+  margin-left: 30px;
+  margin-right: 30px;
+  justify-content: center;
+}
+#menu h3:hover{
+  color: #ABEBC6;
+}
+#menu h4{
+  margin-left: 8px;
+  margin-right: 8px;
+  justify-content: center;
+  color: #F7F9F9;
+}
+#menu h4:hover{
+  color: #D5F5E3;
+}
+#profile_picture{
+  width: 70%;
+  margin-top: 15%;
+  margin-bottom: 2%;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+#tile{
+  background-color: #17202A;
+  border: hidden;
+  align-content: center;
+  border-radius: 5px;
+  width: calc(100% - 5px);
+  height: 150px;
+  margin-bottom: 10px;
+}
+#tile h3{
+  position: relative;
+  margin: 0px;
+  padding-top: 120px;
+  padding-left: 10px;
+
+}
+#tile img{
+  position:absolute;
+  border: hidden;
+  object-fit: cover;
+  border-radius: 5px;
+  height: 150px;
+  width: calc(100% - 10px);
+  filter: blur(4px) brightness(80%);
+}
+#tiles{
+  width: calc(100% - 5px);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#tile-column{
+  background-color: #17202A;
+  border: hidden;
+  align-content: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+#tile-column h3{
+  position: relative;
+  margin: 0px;
+  padding-top: 120px;
+  padding-left: 10px;
+
+}
+#tile-column img{
+  position:absolute;
+  border: hidden;
+  object-fit: cover;
+  border-radius: 5px;
+  height: 150px;
+  width: calc(50% - 10px);
+  filter: blur(2px) brightness(80%);
+}
+#tiles-column{
+  width: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#user_panel{
+  margin-right: 20px;
+  align-items: center;
+  justify-content:flex-end;
+  display: flex;
+  width: 30%;
+}
+#user_panel h4{
+  margin-right: 20px;
+  justify-content: center;
+}
+#user_panel h4:hover{
+  color: #ABEBC6;
+}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+    <body>
+        <header></header>
+        <main>
+          <div id="description-narrow">
+            <div class="wrapper_center"><h1>{{ skill.name }}</h1></div>
+            <div class="wrapper">
+              <div id="entry_category">
+              <h4>{{ skill.category }}</h4>
+              </div>
+              <div  id="entry_date_completed">
+                <pre>Skill known for </pre>
+                <h4>{{ skill.get_time }}</h4>
+              </div>
+            </div>
+            <p>{{ skill.description }}</p>
+          </div>
+        </main>
+    </body>
+</html>
+{% endblock content %}

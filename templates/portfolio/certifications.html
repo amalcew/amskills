@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+    <body>
+        <header></header>
+        <main>
+          <div class="wrapper_center"><h1>Certifications</h1></div>
+          <div id="tiles">
+            {% for certification in certifications %}
+            <a href="{% url 'portfolio:certification' certification.id %}">
+              <div id="tile">
+                {% if certification.cover_image %}
+                <img src="/{{ certification.cover_image }}">
+                {% endif %}
+                <h3>{{ certification.title }}</h3>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </main>
+    </body>
+</html>
+{% endblock content %}

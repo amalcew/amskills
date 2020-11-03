@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+    <body>
+        <header></header>
+        <main>
+          <div class="wrapper">
+            <div id="tiles-column">
+              <div class="wrapper_center"><h1>Work in progress</h1></div>
+              {% for project in projects %}
+                  {% if project.work_in_progress %}
+                  <a href="{% url 'portfolio:project' project.id %}">
+                    <div id="tile-column">
+                      {% if project.cover_image %}
+                      <img src="/{{ project.cover_image }}">
+                      {% endif %}
+                      <h3>{{ project.name }}</h3>
+                    </div>
+                  </a>
+                  {% endif %}
+              {% endfor %}
+            </div>
+            <div id="tiles-column">
+              <div class="wrapper_center"><h1>Projects</h1></div>
+              {% for project in projects %}
+                  {% if not project.work_in_progress %}
+                  <a href="{% url 'portfolio:project' project.id %}">
+                    <div id="tile-column">
+                      {% if project.cover_image %}
+                      <img src="/{{ project.cover_image }}">
+                      {% endif %}
+                      {% if project.dark_cover_image %}
+                      <h3><span class="dark_green">{{ project.name }}</span></h3>
+                      {% else %}
+                      <h3>{{ project.name }}</h3>
+                      {% endif %}
+                    </div>
+                  </a>
+                  {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </main>
+    </body>
+</html>
+{% endblock content %}

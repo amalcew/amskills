@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+    <body>
+        <header>
+          {% if project.cover_image %}
+          <img src="/{{ project.cover_image }}">
+          {% endif %}
+        </header>
+        <main>
+          <div id="description">
+            <div class="wrapper_center"><h1>{{ project.name }}</h1></div>
+            <div class="wrapper">
+              <div id="entry_category">
+              <h4>{{ project.category }}</h4>
+              </div>
+              <div  id="entry_date_completed">
+                {% if not project.work_in_progress %}
+                <pre>Project completed: </pre>
+                <h4>{{ project.date_completed }}</h4>
+                {% else %}
+                <h4>Work in progress</h4>
+                {% endif %}
+              </div>
+            </div>
+            <p>{{ project.description }}</p>
+          </div>
+        </main>
+    </body>
+</html>
+{% endblock content %}
