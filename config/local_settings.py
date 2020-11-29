@@ -140,9 +140,3 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
-
-# Attempt to import local settings
-try:
-    from .local_settings import *
-except ImportError:
-    pass
